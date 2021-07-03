@@ -1,0 +1,16 @@
+<h1>Details</h1>
+
+<%= render(AccordionComponent.new) do |component| %>
+  <%= component.section(heading_text: "part one") %>
+
+  <%= component.section do |section| %>
+    <% section.heading_html do %>
+      <span class="purple">part two (custom html)</span>
+    <% end %>
+
+    <p>this is the content from part two</p>
+
+  <% end %>
+
+  <%= component.section(heading_text: "part three") %>
+<% end %>
