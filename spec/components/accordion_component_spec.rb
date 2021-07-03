@@ -51,7 +51,7 @@ describe AccordionComponent, type: :component do
       end
     end
 
-    xspecify "renders the accordion with all sections" do
+    specify "renders the accordion with all sections" do
       expect(rendered_component).to have_tag('ol') do
         with_tag('li', class: 'one') do
           with_tag('h3', text: 'custom heading one')
