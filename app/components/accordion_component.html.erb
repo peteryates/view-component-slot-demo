@@ -1,13 +1,10 @@
 <div class="accordion">
   <ol>
     <% sections.each do |section| %>
-      <li>
-        <div class="section-heading"><%= section.heading %></div>
-
-        <div>
-          <%= section %>
-        </div>
-      </li>
+      <%= tag.li(class: section.heading) do %>
+        <%= tag.h3(section.heading) %>
+        <%= tag.div(section) %>
+      <% end %>
     <% end %>
   </ol>
 </div>
